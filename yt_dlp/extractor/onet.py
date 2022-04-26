@@ -69,7 +69,7 @@ class OnetBaseIE(InfoExtractor):
                         http_f = {
                             'url': video_url,
                             'format_id': format_id,
-                            'abr': float_or_none(f.get('audio_bitrate')),
+                            'abr': int_or_none(f.get('audio_bitrate')),
                         }
                         if format_type == 'audio':
                             http_f['vcodec'] = 'none'

@@ -3160,7 +3160,7 @@ class YoutubeIE(YoutubeBaseInfoExtractor):
             if no_audio:
                 dct['vbr'] = tbr
             if no_video:
-                dct['abr'] = tbr
+                dct['abr'] = int(tbr)
             if no_audio or no_video:
                 dct['downloader_options'] = {
                     # Youtube throttles chunks >~10M

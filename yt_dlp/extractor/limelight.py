@@ -105,7 +105,7 @@ class LimelightBaseIE(InfoExtractor):
             else:
                 fmt = {
                     'url': stream_url,
-                    'abr': float_or_none(stream.get('audioBitRate')),
+                    'abr': int_or_none((stream.get('audioBitRate')),
                     'fps': float_or_none(stream.get('videoFrameRate')),
                     'ext': ext,
                 }

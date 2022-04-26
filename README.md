@@ -2,7 +2,9 @@
 
 Let the variable "abr" avoid being float type to fit sinusbot windows 1.0.0-beta.13.
 
-bypass the error from sinusbot which displayed: **"could not decode downloader output: json: cannot unmarshal number X into Go struct field YTDLFormat.abr of type int"**
+Bypass the error from sinusbot which displayed: **"could not decode downloader output: json: cannot unmarshal number X into Go struct field YTDLFormat.abr of type int"**
+
+You can download the exe from the release page, or compile it yourself via [Compile](#compile).
 
 # readme from original repo
 <!-- MANPAGE: BEGIN EXCLUDED SECTION -->

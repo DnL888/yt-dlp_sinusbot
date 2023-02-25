@@ -35,7 +35,7 @@ class RadioDeIE(InfoExtractor):
             'url': stream['streamUrl'],
             'ext': stream['streamContentFormat'].lower(),
             'acodec': stream['streamContentFormat'],
-            'abr': stream['bitRate'],
+            'abr': int(stream['bitRate']),
             'asr': stream['sampleRate']
         } for stream in broadcast['streamUrls']]
 

@@ -2199,7 +2199,7 @@ class YoutubeDL:
             if the_only_audio:
                 new_dict.update({
                     'acodec': the_only_audio.get('acodec'),
-                    'abr': the_only_audio.get('abr'),
+                    'abr': int(the_only_audio.get('abr')),
                     'asr': the_only_audio.get('asr'),
                     'audio_channels': the_only_audio.get('audio_channels')
                 })

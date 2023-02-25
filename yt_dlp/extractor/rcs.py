@@ -137,7 +137,7 @@ class RCSBaseIE(InfoExtractor):
                     'ext': 'mp3',
                     'acodec': 'mp3',
                     'vcodec': 'none',
-                    'abr': source.get('bitrate'),
+                    'abr': int(source.get('bitrate')),
                     'url': source['url'],
                 }
 

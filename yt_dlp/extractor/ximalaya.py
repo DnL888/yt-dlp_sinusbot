@@ -85,7 +85,7 @@ class XimalayaIE(XimalayaBaseIE):
         formats = [{
             'format_id': f'{bps}k',
             'url': audio_info[k],
-            'abr': bps,
+            'abr': int(bps),
             'vcodec': 'none'
         } for bps, k in ((24, 'play_path_32'), (64, 'play_path_64')) if audio_info.get(k)]
 

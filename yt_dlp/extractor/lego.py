@@ -108,7 +108,7 @@ class LEGOIE(InfoExtractor):
                 quality = self._QUALITIES.get(video_source_quality)
                 if quality:
                     f.update({
-                        'abr': quality[0],
+                        'abr': int(quality[0]),
                         'height': quality[1],
                         'width': quality[2],
                     }),

@@ -877,7 +877,7 @@ class BiliIntlBaseIE(InfoExtractor):
             formats.append({
                 'url': aud['url'],
                 'ext': 'mp4',
-                'abr': aud.get('bandwidth'),
+                'abr': int(aud.get('bandwidth')),
                 'acodec': aud.get('codecs'),
                 'vcodec': 'none',
                 'filesize': aud.get('size'),

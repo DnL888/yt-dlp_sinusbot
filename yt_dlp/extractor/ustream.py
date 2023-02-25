@@ -152,7 +152,7 @@ class UstreamIE(InfoExtractor):
                 f.update({
                     'vcodec': 'none',
                     'acodec': stream.get('codec'),
-                    'abr': stream.get('bitrate'),
+                    'abr': int(stream.get('bitrate')),
                 })
             formats.append(f)
         return formats

@@ -412,7 +412,7 @@ class BBCCoUkIE(InfoExtractor):
                             })
                         else:
                             fmt.update({
-                                'abr': bitrate,
+                                'abr': int(bitrate),
                                 'acodec': encoding,
                                 'vcodec': 'none',
                             })

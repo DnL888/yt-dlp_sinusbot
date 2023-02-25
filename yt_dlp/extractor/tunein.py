@@ -41,7 +41,7 @@ class TuneInBaseIE(InfoExtractor):
                 'preference': (
                     0 if reliability is None or reliability > 90
                     else 1),
-                'abr': stream.get('Bandwidth'),
+                'abr': int(stream.get('Bandwidth')),
                 'ext': stream.get('MediaType').lower(),
                 'acodec': stream.get('MediaType'),
                 'vcodec': 'none',

@@ -6236,7 +6236,7 @@ class FormatSorter:
         'channels': {'convert': 'float_none', 'field': 'audio_channels'},
         'tbr': {'convert': 'float_none'},
         'vbr': {'convert': 'float_none'},
-        'abr': {'convert': 'float_none'},
+        'abr': {'convert': 'int_none'},
         'asr': {'convert': 'float_none'},
         'source': {'convert': 'float', 'field': 'source_preference', 'default': -1},
 
@@ -6318,6 +6318,8 @@ class FormatSorter:
             return value
         elif conversion == 'float_none':
             return float_or_none(value)
+        elif conversion == 'int_none':
+            return int_or_none(value)
         elif conversion == 'bytes':
             return parse_bytes(value)
         elif conversion == 'order':

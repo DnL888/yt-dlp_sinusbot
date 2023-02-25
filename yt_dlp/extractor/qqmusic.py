@@ -119,7 +119,7 @@ class QQMusicIE(InfoExtractor):
                 'format': format_id,
                 'format_id': format_id,
                 'quality': details['preference'],
-                'abr': details.get('abr'),
+                'abr': int(details.get('abr')),
             })
         self._check_formats(formats, mid)
 

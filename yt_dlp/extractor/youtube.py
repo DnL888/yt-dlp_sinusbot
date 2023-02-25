@@ -1329,7 +1329,7 @@ class YoutubeIE(YoutubeBaseInfoExtractor):
                 'uploader': 'AfrojackVEVO',
                 'uploader_id': 'AfrojackVEVO',
                 'upload_date': '20131011',
-                'abr': 129.495,
+                'abr': int(129.495),
                 'like_count': int,
                 'channel_id': 'UChuZAo1RKL85gev3Eal9_zg',
                 'playable_in_embed': True,

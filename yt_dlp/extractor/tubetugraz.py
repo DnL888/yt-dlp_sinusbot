@@ -1,5 +1,6 @@
 from .common import InfoExtractor
 from ..utils import (
+    int_or_none,
     float_or_none,
     parse_resolution,
     traverse_obj,
@@ -74,7 +75,7 @@ class TubeTuGrazBaseIE(InfoExtractor):
             if transport == 'https':
                 formats = [{
                     'url': url,
-                    'abr': float_or_none(traverse_obj(format_info, ('audio', 'bitrate')), 1000),
+                    'abr': int_or_none(traverse_obj(format_info, ('audio', 'bitrate')), 1000),
                     'vbr': float_or_none(traverse_obj(format_info, ('video', 'bitrate')), 1000),
                     'fps': traverse_obj(format_info, ('video', 'framerate')),
                     **parse_resolution(traverse_obj(format_info, ('video', 'resolution'))),

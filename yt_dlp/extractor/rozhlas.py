@@ -156,7 +156,7 @@ class RozhlasVltavaIE(InfoExtractor):
                 'url': audio_link['url'],
                 'ext': audio_link.get('variant'),
                 'format_id': audio_link.get('variant'),
-                'abr': audio_link.get('bitrate'),
+                'abr': int(audio_link.get('bitrate')),
                 'acodec': audio_link.get('variant'),
                 'vcodec': 'none',
             } for audio_link in entry['audioLinks']],

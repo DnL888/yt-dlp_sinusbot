@@ -47,7 +47,7 @@ class KuwoBaseIE(InfoExtractor):
                     'format_id': file_format['format'],
                     'format': file_format['format'],
                     'quality': file_format['preference'],
-                    'abr': file_format.get('abr'),
+                    'abr': int(file_format.get('abr')),
                 })
 
         return formats

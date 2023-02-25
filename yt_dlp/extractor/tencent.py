@@ -102,7 +102,7 @@ class TencentBaseIE(InfoExtractor):
         common_info = {
             'width': video_response.get('vw'),
             'height': video_response.get('vh'),
-            'abr': float_or_none(format_response.get('audiobandwidth'), scale=1000),
+            'abr': int_or_none(format_response.get('audiobandwidth'), scale=1000),
             'vbr': float_or_none(format_response.get('bandwidth'), scale=1000),
             'fps': format_response.get('vfps'),
             'format': format_response.get('sname'),

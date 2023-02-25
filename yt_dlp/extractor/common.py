@@ -2134,7 +2134,7 @@ class InfoExtractor:
                         r'audio.*?(?:%3D|=)(\d+)(?:-video.*?(?:%3D|=)(\d+))?', f['url'])
                     if mobj:
                         abr, vbr = mobj.groups()
-                        abr, vbr = float_or_none(abr, 1000), float_or_none(vbr, 1000)
+                        abr, vbr = int_or_none(abr, 1000), float_or_none(vbr, 1000)
                         abr = int(abr)
                         f.update({
                             'vbr': vbr,

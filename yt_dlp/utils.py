@@ -2589,7 +2589,7 @@ def int_or_none(v, scale=1, default=None, get_attr=None, invscale=1):
     if get_attr and v is not None:
         v = getattr(v, get_attr, None)
     try:
-        return int(v) * invscale // scale
+        return int(int(v) * invscale // scale)
     except (ValueError, TypeError, OverflowError):
         return default
 
@@ -6482,7 +6482,7 @@ class FormatSorter:
             if format.get('vcodec') != 'none' and format.get('vbr') is None:
                 format['vbr'] = format.get('tbr') - format.get('abr', 0)
             if format.get('acodec') != 'none' and format.get('abr') is None:
-                format['abr'] = format.get('tbr') - format.get('vbr', 0)
+                format['abr'] = int(format.get('tbr') - format.get('vbr', 0))
 
         return tuple(self._calculate_field_preference(format, field) for field in self._order)
 

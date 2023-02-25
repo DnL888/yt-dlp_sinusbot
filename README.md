@@ -1,12 +1,18 @@
 # What I changed in this forked version
 
+This is an updated fork from yt-dlp that works with sinusbot windows 1.0.0-beta.13. This contains the fix for this recent youtube change https://github.com/yt-dlp/yt-dlp/issues/6247 merged with the original fork from qwe04687 https://github.com/qwe04687/yt-dlp and some more changes.
+
+Sinusbot forum thread: https://forum.sinusbot.com/threads/could-not-decode-downloader-output-json-cannot-unmarshal-number-127-37-into-go-struct-field-ytdlformat-abr-of-type-int.8291/page-6#post-50858
+
+You can download the exe from [Release](https://github.com/DnL888/yt-dlp_sinusbot/releases), or compile it yourself via [Compile](#compile).
+
+## Original readme from qwe04687's fork
+
 Let the variable "abr" avoid being float type to fit sinusbot windows 1.0.0-beta.13.
 
 Bypass the error from sinusbot which displayed: **"could not decode downloader output: json: cannot unmarshal number X into Go struct field YTDLFormat.abr of type int"**
 
-You can download the exe from [Release](https://github.com/qwe04687/yt-dlp/releases), or compile it yourself via [Compile](#compile).
-
-# readme from original repo
+# Readme from original repo
 <!-- MANPAGE: BEGIN EXCLUDED SECTION -->
 <div align="center">
 

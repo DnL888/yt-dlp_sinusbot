@@ -4,6 +4,11 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2023.03.05.131452
+
+#### Core changes
+- [fix conflict with int abr](https://github.com/yt-dlp/yt-dlp/commit/f6c3ea520312f05ef865ed16e3d4fade82f1dbda) by [pukkandan](https://github.com/pukkandan)
+
 ### 2023.03.04
 
 #### Extractor changes

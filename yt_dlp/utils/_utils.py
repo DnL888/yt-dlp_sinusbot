@@ -5443,9 +5443,9 @@ class FormatSorter:
         if not format.get('vbr') and format.get('vcodec') != 'none':
             format['vbr'] = try_call(lambda: format['tbr'] - format['abr']) or None
         if not format.get('abr') and format.get('acodec') != 'none':
-            format['abr'] = int(try_call(lambda: format['tbr'] - format['vbr'])) or None
+            format['abr'] = try_call(lambda: int(format['tbr']) - int(format['vbr'])) or None
         if not format.get('tbr'):
-            format['tbr'] = int(try_call(lambda: format['vbr'] + format['abr'])) or None
+            format['tbr'] = try_call(lambda: int(format['vbr']) + int(format['abr'])) or None
 
         return tuple(self._calculate_field_preference(format, field) for field in self._order)
 
